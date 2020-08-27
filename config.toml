@@ -1,0 +1,10 @@
+metadata-version = "2015-12-19"
+log-level = "debug"
+interval = 10
+onetime = false
+
+[[ template ]]
+source = "/etc/rancher-conf/sidekicks.txt.tmpl"
+dest = "/etc/rancher-conf/sidekicks.txt"
+notify-cmd = "sh /etc/rancher-conf/commit.sh"
+notify-output = true
