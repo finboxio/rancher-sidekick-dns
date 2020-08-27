@@ -32,7 +32,7 @@ info:
 	@echo "docker images:   $(DOCKER_VERSION)"
 	@echo "                 $(DOCKER_LATEST)"
 
-docker.build: build
+docker.build:
 	@docker build -t $(DOCKER_VERSION) -t $(DOCKER_LATEST) .
 
 docker.push: docker.build
