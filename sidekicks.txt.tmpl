@@ -1,5 +1,7 @@
-{{ self.Container.Parent.PrimaryIp }} {{ self.Container.Parent.Service.Name }}.sidekick
 {{ with self.Container -}}
+{{ with .Parent }}
+{{ .PrimaryIp }} {{ .Service.Name }}.sidekick
+{{- end }}
 {{ range .Sidekicks -}}
 {{ .PrimaryIp }} {{ .Service.Name }}.sidekick
 {{ end -}}
